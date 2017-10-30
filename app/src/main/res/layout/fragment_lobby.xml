@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_lobby"
+    android:screenOrientation="portrait"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ghhos.chat_client.ui.activity.MainActivity">
+
+    <Button
+        android:text="Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/fr_lobby_bLogout"
+        android:visibility="invisible"/>
+
+    <Button
+        android:text="Change Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fr_lobby_bChange"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/fr_lobby_bLogout"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fr_lobby_name"
+        android:layout_toLeftOf="@id/fr_lobby_bChange"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+
+
+    <Button
+        android:text="Refresh Clients"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bRefreshclients"
+        android:layout_above="@+id/fr_lobby_bRefreshrooms"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+    <Button
+        android:text="Private Room"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bPrivate"
+        android:layout_alignBaseline="@+id/fr_lobby_bRefreshclients"
+        android:layout_alignBottom="@+id/fr_lobby_bRefreshclients"
+        android:layout_toEndOf="@+id/fr_lobby_bRefreshclients"
+        android:visibility="invisible"/>
+
+    <Button
+        android:text="Create Room"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bCreate"
+        android:layout_above="@+id/fr_lobby_bRefreshclients"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+    <Button
+        android:text="Enter"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bEnter"
+        android:layout_below="@+id/fr_lobby_lvRoomsList"
+        android:layout_toEndOf="@+id/fr_lobby_bCreate"
+        android:visibility="invisible"/>
+
+    <ListView
+        android:id="@+id/fr_lobby_lvUsersList"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/fr_lobby_bChange"
+        android:layout_above="@id/fr_lobby_bCreate"
+        android:visibility="invisible"/>
+
+
+    <ListView
+        android:id="@+id/fr_lobby_lvRoomsList"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fr_lobby_bChange"
+        android:layout_above="@id/fr_lobby_bCreate"
+        android:visibility="invisible"/>
+
+    <Button
+        android:text="refresh rooms"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bRefreshrooms"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:visibility="invisible"/>
+
+    <Button
+        android:text="@string/button_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/fragment_lobby_bLogin"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"/>
+    <Button
+        android:text="Ban"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bBan"
+        android:layout_toEndOf="@+id/fr_lobby_bRefreshrooms"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"/>
+    <Button
+        android:text="Unban"
+        android:layout_width="40pt"
+        android:layout_height="25pt"
+        android:id="@+id/fr_lobby_bUnban"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/fr_lobby_bBan"
+        android:visibility="invisible"/>
+
+</RelativeLayout>

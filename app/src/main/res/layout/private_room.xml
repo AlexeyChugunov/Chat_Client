@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fr_private_room"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ghhos.chat_client.ui.activity.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:id="@+id/fr_private_room_bClose"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fr_private_room_bExit"
+        android:text="Exit room"
+        android:layout_toLeftOf="@id/fr_private_room_bClose"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fr_private_room_roomname"
+        android:layout_alignParentLeft="true"/>
+
+    <ListView
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/fr_private_room_bClose"
+        android:id="@+id/lv_private_messages" />
+
+    <EditText
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/fr_private_room_etSend"
+        android:hint="Put your message"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/fr_private_room_bSend"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/fr_private_room_etSend"
+        android:layout_alignBottom="@+id/fr_private_room_etSend"
+        />
+</RelativeLayout>
